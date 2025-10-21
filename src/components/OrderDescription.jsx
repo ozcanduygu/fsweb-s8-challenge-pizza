@@ -16,6 +16,7 @@ const styles= {
         maxWidth: "532px",
         opacity: 1,
         padding: "0 16px",
+        height: "173px",
     },
     text: {
         fontFamily: "Barlow",
@@ -26,6 +27,7 @@ const styles= {
         letterSpacing: "0%",
         color: "#5F5F5F",
         margin: 0,
+        textAlign: "left",
   },
 }
 

@@ -1,14 +1,15 @@
 import React from "react";
-// import logo from '../images/iteration-1-images/logo.svg';
+import logo from '../assets/logo.svg';
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header style={styles.header}>
-      <h1 style={styles.heading}>Teknolojik Yemekler</h1>
-      {/* <img src={logo} alt="Logo" style={styles.heading} /> */}
+      <img src={logo} alt="Teknolojik Yemekler Logo" style={styles.logo} />
+      
       <nav style={styles.nav}>
-        <a href="#" style={styles.navLink}>Anasayfa</a>
-        <a href="#" style={styles.navLink}>Sipariş Oluştur</a>
+        <Link to="/" style={styles.navLink}>Anasayfa</Link>
+        <Link to="/order" style={{ ...styles.navLink, fontSize: '24px', fontWeight: '500' }}>Sipariş Oluştur</Link>
       </nav>
     </header>
   );
@@ -30,26 +31,24 @@ const styles = {
     boxSizing: "border-box",
     zIndex: 9999,
   },
-  heading: {
-    fontSize: "32px",
-    fontWeight: "700",
-    fontFamily: "'Roboto', sans-serif",
-    color: "#ffffff",
-    margin: "0 0 20px 0",  // Başlık ile menü arası boşluk
-    width:'361px',
-    height:'45.79px'
+  logo: {
+    width: '361px',
+    height: '45.79px',
+    marginBottom: '20px',
   },
   nav: {
     display: "flex",
     gap: "30px",
     width: '182px',
-    height:'29px'
+    height:'29px',
+    marginLeft:'-300px'
   },
   navLink: {
     color: "#ffffff",
+    fontFamlily: 'Barlow, sans-serif',
     textDecoration: "none",
     fontWeight: "600",
-    fontSize: "18px",
+    fontSize: "16px",
     cursor: "pointer",
   },
 };

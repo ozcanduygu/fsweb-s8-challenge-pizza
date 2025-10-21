@@ -22,7 +22,7 @@ const styles={
         textAlign:'center',
         lineHeight:'102px',
         paddingTop:'0px',
-        marginTop:'-100px',
+        marginTop:'-120px',
     }
 }
 export default HomePageTitle;

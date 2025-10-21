@@ -10,13 +10,15 @@ const HomePage = () => {
       backgroundSize: "cover",            
       backgroundPosition: "center",       
       backgroundRepeat: "no-repeat",      
-      width: "100vw",                     
+      width: "100%",                     
       height: "100vh",                    
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
       padding: "20px",
+      overflowX: 'hidden',
+      
     },
   };
 

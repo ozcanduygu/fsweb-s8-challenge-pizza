@@ -1,11 +1,7 @@
-import React, {useState} from "react";  
+import React from "react";  
 
-const SizeOptions = () => {
-    const [size, setSize] = useState("");
-    const handleSizeChange = (e) => {
-        setSize(e.target.value);
-    }
-
+const SizeOptions = ({size, onSizeChange}) => {
+    
     return (
         <div style={styles.container}>
             <p style={styles.title}>Boyut Seç</p>
@@ -15,7 +11,7 @@ const SizeOptions = () => {
                     name="size"
                     value="küçük"
                     checked={size === "küçük"}
-                    onChange={handleSizeChange}
+                    onChange={onSizeChange}
                 />Küçük
             </label>
             <label style={styles.label}>
@@ -24,7 +20,7 @@ const SizeOptions = () => {
                     name="size"
                     value="orta"
                     checked={size === "orta"}
-                    onChange={handleSizeChange}
+                    onChange={onSizeChange}
                 />Orta
             </label>
             <label style={styles.label}>
@@ -33,7 +29,7 @@ const SizeOptions = () => {
                     name="size"
                     value="büyük"
                     checked={size === "büyük"}
-                    onChange={handleSizeChange}
+                    onChange={onSizeChange}
                 />Büyük
             </label>
         </div>

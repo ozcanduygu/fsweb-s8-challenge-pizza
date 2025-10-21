@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const ExtraIngredients = () => {
-  const [selectedIngredients, setSelectedIngredients] = useState([]);
-
+const ExtraIngredients = ({ selectedIngredients, setSelectedIngredients }) => {
   const extraIngredients = [
     "Pepperoni",
     "Sosis",
@@ -72,7 +70,7 @@ const styles = {
   },
   checkboxList: {
     width: "524px",
-    height:"214px",
+    height: "214px",
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "8px",
