@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const OrderSummary = ({ isFormValid }) => {
-  const selectedExtras = 5 * 3;
+const OrderSummary = ({ isFormValid,selectedIngredients = [], quantity = 1 }) => {
+  const selectedExtras = selectedIngredients.length*5;
   const basePrice = 85.5;
-  const totalPrice = basePrice + selectedExtras;
+  const totalPrice = (basePrice + selectedExtras)* quantity;
   const navigate = useNavigate();
 
   const handleSubmit = () => {
